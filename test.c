@@ -1,8 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
 
-void free(void *ptr);
-
 typedef uint64_t u64;
 
 typedef struct {
@@ -27,7 +25,7 @@ void string_push_char(string *self, char c);
 void string_push_str(string *self, str s);
 void string_delete(string self);
 
-int main(void) {
+int main() {
     str s = str_from_c_string("Hello");
     string st = string_from_str(s);
     string_push_str(&st, str_from_c_string(", world!"));
